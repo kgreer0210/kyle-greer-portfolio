@@ -70,20 +70,21 @@ export default function Home() {
             <TypingEffect text="Making life easier for those around me, one line of code at a time." />
           </p>
           <p className="mb-4">
-            I'm passionate about crafting websites and applications that make a
-            real difference in people's lives. My drive comes from seeing how
-            the right digital solution can streamline processes, solve problems,
-            and bring ideas to life. Whether it's a sleek personal website, a
-            robust web application, or an innovative mobile app, I love the
-            challenge of turning concepts into reality through code.
+            I&apos;m passionate about crafting websites and applications that
+            make a real difference in people&apos;s lives. My drive comes from
+            seeing how the right digital solution can streamline processes,
+            solve problems, and bring ideas to life. Whether it&apos;s a sleek
+            personal website, a robust web application, or an innovative mobile
+            app, I love the challenge of turning concepts into reality through
+            code.
           </p>
           <p>
-            Currently, I'm putting this passion to work as a {jobTitle} at
+            Currently, I&apos;m putting this passion to work as a {jobTitle} at
             Robins Financial Credit Union. Here, I specialize in PowerOn by Jack
             Henry and lead the implementation of new back-office applications.
             By leveraging cutting-edge technologies like Next.js, Tailwind, and
-            various React libraries, I'm building efficient solutions that
-            enhance our operations and ultimately improve our members'
+            various React libraries, I&apos;m building efficient solutions that
+            enhance our operations and ultimately improve our members&apos;
             experience.
           </p>
         </section>
@@ -150,8 +151,8 @@ export default function Home() {
           </h2>
           <ul className="list-disc list-inside">
             <li>
-              Bachelor's degree in Information Technology, specializing in Web
-              and Mobile Programming
+              Bachelor&apos;s degree in Information Technology, specializing in
+              Web and Mobile Programming
             </li>
             <li>
               Various Udemy course certificates in web development technologies
