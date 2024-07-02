@@ -172,7 +172,7 @@ export default function Home() {
               <li>User management system with role-based access control</li>
             </ul>
             <p className="mt-2">
-              This solution significantly improved the client's operational
+              This solution significantly improved the client&apos;s operational
               efficiency, reducing inventory discrepancies and enhancing show
               planning capabilities.
             </p>
@@ -231,10 +231,10 @@ export default function Home() {
             }`}
           >
             <blockquote className="italic">
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              &quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+              do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat."
+              nisi ut aliquip ex ea commodo consequat.&quot;
             </blockquote>
             <p className="mt-2 font-semibold">
               - Your name here, position, company name
