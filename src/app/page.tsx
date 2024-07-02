@@ -61,26 +61,31 @@ export default function Home() {
         className={`${theme === "dark" ? "bg-gray-700" : "bg-gray-200"} p-4`}
       >
         <ul className="flex justify-center space-x-4">
-          {["About", "Skills", "Projects", "Education", "Contact"].map(
-            (item) => (
-              <motion.li
-                key={item}
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
+          {[
+            "About",
+            "Skills",
+            "Projects",
+            "Testimonials",
+            "Education",
+            "Contact",
+          ].map((item) => (
+            <motion.li
+              key={item}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <a
+                href={`#${item.toLowerCase()}`}
+                className={`hover:text-blue-400 transition-colors duration-200 ${
+                  theme === "dark"
+                    ? "hover:text-blue-300"
+                    : "hover:text-blue-600"
+                }`}
               >
-                <a
-                  href={`#${item.toLowerCase()}`}
-                  className={`hover:text-blue-400 transition-colors duration-200 ${
-                    theme === "dark"
-                      ? "hover:text-blue-300"
-                      : "hover:text-blue-600"
-                  }`}
-                >
-                  {item}
-                </a>
-              </motion.li>
-            )
-          )}
+                {item}
+              </a>
+            </motion.li>
+          ))}
         </ul>
       </nav>
 
@@ -144,12 +149,32 @@ export default function Home() {
             }`}
           >
             <h3 className="text-xl font-semibold mb-2 text-blue-400">
-              Fireworks Inventory Management Web Application
+              Deepsouth Fireworks Inventory Management System
             </h3>
-            <p>
-              Developed a custom application for a local fireworks business to
-              track inventory, manage shows, and generate picking slips for
-              warehouse operations.
+            <p className="mb-2">
+              Developed a comprehensive web application for a local fireworks
+              business, streamlining their inventory management, show planning,
+              and warehouse operations. The system offers:
+            </p>
+            <ul className="list-disc list-inside ml-4 space-y-1">
+              <li>
+                Real-time inventory tracking with dynamic data tables and
+                overview dashboards
+              </li>
+              <li>
+                Show management functionality, including inventory allocation
+                and historical data
+              </li>
+              <li>
+                Automated generation of picking slips for efficient warehouse
+                operations
+              </li>
+              <li>User management system with role-based access control</li>
+            </ul>
+            <p className="mt-2">
+              This solution significantly improved the client's operational
+              efficiency, reducing inventory discrepancies and enhancing show
+              planning capabilities.
             </p>
           </div>
           <div
@@ -158,12 +183,61 @@ export default function Home() {
             }`}
           >
             <h3 className="text-xl font-semibold mb-2 text-blue-400">
-              Back Office Applications (Work Project)
+              SymX Apps: Next-Gen Back Office Solutions
             </h3>
-            <p>
-              Leading the development of new back-office applications using
-              SymXchange API, built with Next.js, Tailwind, and various React
-              libraries.
+            <p className="mb-2">
+              Leading the development of a groundbreaking suite of
+              microservices-based applications for Robins Financial Credit
+              Union, designed to revolutionize back-office operations. Key
+              aspects of the project include:
+            </p>
+            <ul className="list-disc list-inside ml-4 space-y-1">
+              <li>
+                Integration with legacy systems via SOAP API, bridging modern
+                tech with existing infrastructure
+              </li>
+              <li>
+                Development of targeted micro-apps for various departments,
+                enhancing operational efficiency
+              </li>
+              <li>
+                Utilization of cutting-edge web technologies: React, Next.js,
+                and Tailwind CSS
+              </li>
+              <li>
+                Implementation of Shadcn component library for consistent and
+                professional UI/UX
+              </li>
+              <li>
+                Pioneering the adoption of modern web development practices
+                within the credit union
+              </li>
+            </ul>
+            <p className="mt-2">
+              This innovative project marks a significant technological leap for
+              the organization, setting new standards for internal tools and
+              processes. My role involves extensive research and implementation
+              of best practices in React and Next.js ecosystems, ensuring a
+              robust, scalable, and future-proof solution.
+            </p>
+          </div>
+        </section>
+
+        <section id="testimonials" className="mb-12">
+          <h1 className="text-2xl font-bold mb-4">Testimonials</h1>
+          <div
+            className={`p-4 rounded ${
+              theme === "dark" ? "bg-gray-800" : "bg-gray-100"
+            }`}
+          >
+            <blockquote className="italic">
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat."
+            </blockquote>
+            <p className="mt-2 font-semibold">
+              - Your name here, position, company name
             </p>
           </div>
         </section>
@@ -180,9 +254,11 @@ export default function Home() {
             <li>
               Various Udemy course certificates in web development technologies
               <ul className="list-circle list-inside ml-5 mt-2 space-y-1">
-                <li>The Complete 2024 Web Development Bootcamp by Angela Yu</li>
                 <li>
-                  Next.JS 14 & React The Complete Guide by Maximilian
+                  The Complete 2024 Web Development Bootcamp - by Angela Yu
+                </li>
+                <li>
+                  Next.JS 14 & React: The Complete Guide - by Maximilian
                   Schwarzmüller
                 </li>
               </ul>
