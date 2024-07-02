@@ -6,6 +6,8 @@ import TypingEffect from "@/components/TypingEffect";
 import SocialIcons from "@/components/SocialIcons";
 import ToggleSwitch from "../components/ToggleSwitch";
 import { useTheme } from "../context/ThemeContext";
+import profilePicture from "../../public/Kyle Profile Picture.jpg";
+import Image from "next/image";
 
 export default function Home() {
   const jobTitle = "Programmer II";
@@ -20,24 +22,39 @@ export default function Home() {
     >
       <ToggleSwitch />
       <header
-        className={`p-6 ${theme === "dark" ? "bg-gray-800" : "bg-gray-100"}`}
+        className={`p-6 ${
+          theme === "dark"
+            ? "bg-gradient-to-r from-gray-800 to-gray-700"
+            : "bg-gradient-to-r from-blue-100 to-blue-50"
+        }`}
       >
-        <motion.h1
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="text-4xl font-bold text-center"
-        >
-          Kyle Greer
-        </motion.h1>
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.5, duration: 0.5 }}
-          className="text-xl text-center mt-2"
-        >
-          {jobTitle} | Next.js Enthusiast | Problem Solver
-        </motion.p>
+        <div className="flex items-center justify-center mb-4">
+          <div className="w-24 h-24 rounded-full bg-gray-300 mr-4">
+            <Image
+              src={profilePicture}
+              alt="Kyle Greer"
+              className="w-full h-full rounded-full object-cover"
+            />
+          </div>
+          <div>
+            <motion.h1
+              initial={{ opacity: 0, y: -50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="text-4xl font-bold"
+            >
+              Kyle Greer
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.5, duration: 0.5 }}
+              className="text-xl mt-2"
+            >
+              {jobTitle} | Next.js Enthusiast | Problem Solver
+            </motion.p>
+          </div>
+        </div>
       </header>
 
       <nav
@@ -53,7 +70,11 @@ export default function Home() {
               >
                 <a
                   href={`#${item.toLowerCase()}`}
-                  className="hover:text-blue-400"
+                  className={`hover:text-blue-400 transition-colors duration-200 ${
+                    theme === "dark"
+                      ? "hover:text-blue-300"
+                      : "hover:text-blue-600"
+                  }`}
                 >
                   {item}
                 </a>
@@ -65,7 +86,7 @@ export default function Home() {
 
       <main className="container mx-auto mt-8 px-4">
         <section id="about" className="mb-12">
-          <h2 className="text-2xl font-bold mb-4">About Me</h2>
+          <h1 className="text-2xl font-bold mb-4">About Me</h1>
           <p className="mb-4">
             <TypingEffect text="Making life easier for those around me, one line of code at a time." />
           </p>
@@ -90,7 +111,7 @@ export default function Home() {
         </section>
 
         <section id="skills" className="mb-12">
-          <h2 className="text-2xl font-bold mb-4">Skills</h2>
+          <h1 className="text-2xl font-bold mb-4">Skills</h1>
           <ul className="grid grid-cols-2 gap-4">
             {[
               "Next.js",
@@ -103,7 +124,9 @@ export default function Home() {
               <motion.li
                 key={skill}
                 className={`p-2 rounded ${
-                  theme === "dark" ? "bg-gray-800" : "bg-gray-100"
+                  theme === "dark"
+                    ? "bg-gray-800 border-l-4 border-blue-500"
+                    : "bg-gray-100 border-l-4 border-blue-400"
                 }`}
                 whileHover={{ scale: 1.05 }}
               >
@@ -114,13 +137,13 @@ export default function Home() {
         </section>
 
         <section id="projects" className="mb-12">
-          <h2 className="text-2xl font-bold mb-4">Projects</h2>
+          <h1 className="text-2xl font-bold mb-4">Projects</h1>
           <div
             className={`p-4 rounded mb-4 ${
               theme === "dark" ? "bg-gray-800" : "bg-gray-100"
             }`}
           >
-            <h3 className="text-xl font-semibold mb-2">
+            <h3 className="text-xl font-semibold mb-2 text-blue-400">
               Fireworks Inventory Management Web Application
             </h3>
             <p>
@@ -134,7 +157,7 @@ export default function Home() {
               theme === "dark" ? "bg-gray-800" : "bg-gray-100"
             }`}
           >
-            <h3 className="text-xl font-semibold mb-2">
+            <h3 className="text-xl font-semibold mb-2 text-blue-400">
               Back Office Applications (Work Project)
             </h3>
             <p>
@@ -146,22 +169,29 @@ export default function Home() {
         </section>
 
         <section id="education" className="mb-12">
-          <h2 className="text-2xl font-bold mb-4">
+          <h1 className="text-2xl font-bold mb-4">
             Education & Certifications
-          </h2>
-          <ul className="list-disc list-inside">
+          </h1>
+          <ul className="list-disc list-outside ml-5 space-y-2">
             <li>
               Bachelor&apos;s degree in Information Technology, specializing in
               Web and Mobile Programming
             </li>
             <li>
               Various Udemy course certificates in web development technologies
+              <ul className="list-circle list-inside ml-5 mt-2 space-y-1">
+                <li>The Complete 2024 Web Development Bootcamp by Angela Yu</li>
+                <li>
+                  Next.JS 14 & React The Complete Guide by Maximilian
+                  Schwarzmüller
+                </li>
+              </ul>
             </li>
           </ul>
         </section>
 
         <section id="contact" className="mb-12">
-          <h2 className="text-2xl font-bold mb-4">Contact Me</h2>
+          <h1 className="text-2xl font-bold mb-4">Contact Me</h1>
           <p>
             The best way to reach me is via email at:{" "}
             <a
@@ -176,7 +206,9 @@ export default function Home() {
 
       <footer
         className={`${
-          theme === "dark" ? "bg-gray-800" : "bg-gray-300"
+          theme === "dark"
+            ? "bg-gradient-to-r from-gray-800 to-gray-700"
+            : "bg-gradient-to-r from-blue-100 to-blue-50"
         } text-center p-4 mt-8`}
       >
         <p>&copy; 2024 Kyle Greer. All rights reserved.</p>

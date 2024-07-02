@@ -18,7 +18,7 @@ const TypingEffect: React.FC<TypingEffectProps> = ({ text }) => {
     }
   }, [index, text]);
 
-  return <span>{displayText}</span>;
+  return <span className="text-xl">{displayText}</span>;
 };
 
 export default TypingEffect;
