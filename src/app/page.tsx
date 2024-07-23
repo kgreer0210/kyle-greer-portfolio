@@ -13,6 +13,7 @@ export default function Home() {
   const jobTitle = "Programmer II";
   const linkedInUrl = "https://www.linkedin.com/in/kyle-greer-9201a3115/";
   const githubUrl = "https://github.com/kgreer0210";
+  const facebookUrl = "https://www.facebook.com/kyle.greer.7";
   const { theme } = useTheme();
   return (
     <div
@@ -288,7 +289,11 @@ export default function Home() {
         } text-center p-4 mt-8`}
       >
         <p>&copy; 2024 Kyle Greer. All rights reserved.</p>
-        <SocialIcons linkedInUrl={linkedInUrl} githubUrl={githubUrl} />
+        <SocialIcons
+          linkedInUrl={linkedInUrl}
+          githubUrl={githubUrl}
+          facebookUrl={facebookUrl}
+        />
       </footer>
     </div>
   );
